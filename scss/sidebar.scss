@@ -1,0 +1,99 @@
+.sidebar {
+	flex: 0 1 306px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	background-color: $white;
+	padding: 28px 36px;
+}
+.logo {
+	color: #000;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	margin: 0 0 54px 0;
+	cursor: pointer;
+	&__text {
+		@include fontDesing(27px, 600, 39px);
+		transition: 0.5s ease;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__text_sml {
+		@include fontDesing(9px, 500, 15px);
+	}
+}
+.nav {
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px;
+		margin: 0 0 18px;
+		border-radius: 9px;
+		color: $grey;
+		text-decoration: none;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+	}
+	&__link-text {
+		@include fontDesing(15px, 500, 21px);
+		margin: 0 0 0 15px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.user-photo {
+	display: flex;
+	&__text {
+		margin: 0 0 0 12px;
+		&_title {
+			@include fontDesing(15px, 500, 21px);
+		}
+		&_subtitle {
+			@include fontDesing(12px, 400, 18px);
+			color: $dark_grey;
+		}
+	}
+}
+.btn-menu {
+	width: 36px;
+	height: 27px;
+	margin: 0 0 0 21px;
+	position: relative;
+	border: 0;
+	background: none;
+	padding: 0;
+	outline: none;
+	display: none;
+	cursor: pointer;
+	transition: 0.5s ease;
+	&:hover {
+		opacity: 70%;
+	}
+	&__first,
+	&__second,
+	&__third {
+		display: block;
+		height: 6px;
+		background: $text-secondary;
+		border: 0;
+		padding: 0;
+		width: 36px;
+		border-radius: 3px;
+		position: absolute;
+	}
+	&__first {
+		top: 0;
+	}
+	&__second {
+		top: 11px;
+	}
+	&__third {
+		bottom: 0;
+	}
+}

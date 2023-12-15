@@ -1,0 +1,20 @@
+$white: #fff;
+$purple: #5932ea;
+$blue: #fafbff;
+$light_blue: #f9fbff;
+$super_light_grey: #b5b7c0;
+$light_grey: #eee;
+$grey: #9197b3;
+$dark_grey: #757575;
+$green: #16c098;
+$text-secondary: #292d32;
+$red: #df0404;
+$light_red: #ffc5c5;
+$dark_green: #008767;
+$light_green: #16c09861;
+
+@mixin fontDesing($size, $weight, $line) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line;
+}

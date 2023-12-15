@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'reset.scss';
+@import 'varMix.scss';
+@import 'sidebar.scss';
+@import 'main.scss';
+
+.wrapper {
+	display: flex;
+	font-family: 'Poppins', sans-serif;
+	background-color: $blue;
+}
+.active {
+	background-color: $purple;
+	color: $white;
+}
+.stroke-active {
+	stroke: $white;
+}
+.fill-active {
+	fill: $white;
+}
+.active {
+	background-color: $purple;
+	color: $white;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+	.sidebar {
+		flex: 0 1 260px;
+	}
+	.logo {
+		margin: 0 0 36px 0;
+	}
+	.nav {
+		&__item {
+			padding: 9px;
+		}
+	}
+	.main {
+		padding: 27px 45px;
+	}
+	.table {
+		&__cell,
+		&__headcell {
+			@include fontDesing(12px, 500, 18px);
+		}
+		&__cell {
+			padding: 12px 0;
+		}
+		&__headcell {
+			padding: 9px 0;
+		}
+	}
+	.down {
+		padding: 0 45px 30px;
+		&__text {
+			@include fontDesing(12px, 500, 21px);
+		}
+
+		&__link,
+		&__ellipsis {
+			color: #404b52;
+			@include fontDesing(10px, 500, 12px);
+			padding: 6px 9px;
+			margin: 0 10px 0 0;
+			text-decoration: none;
+		}
+	}
+}
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+	.wrapper {
+		flex-direction: column;
+	}
+	.sidebar {
+		flex: 0 0 80px;
+		padding: 28px;
+		flex-direction: row;
+	}
+	.logo {
+		margin: 0;
+	}
+	.nav {
+		display: none;
+	}
+	.btn-menu {
+		display: block;
+	}
+	.main {
+		padding: 18px 32px;
+
+		&__greeting {
+			margin: 0 0 32px;
+		}
+	}
+	.table {
+		&__cell,
+		&__headcell {
+			@include fontDesing(12px, 500, 15px);
+		}
+		&__cell {
+			padding: 9px 6px;
+		}
+		&__headcell {
+			padding: 6px 0;
+		}
+		&__bage_active,
+		&__bage_inactive {
+			border-radius: 4px;
+			padding: 0 6px;
+			@include fontDesing(12px, 500, 15px);
+		}
+	}
+	.down {
+		padding: 0 32px 30px;
+		&__text {
+			@include fontDesing(12px, 500, 21px);
+		}
+
+		&__link,
+		&__ellipsis {
+			padding: 6px 9px;
+			margin: 0 9px 0 0;
+		}
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+	.wrapper {
+		flex-direction: column;
+	}
+	.sidebar {
+		flex: 0 0 80px;
+		padding: 28px;
+		flex-direction: row;
+	}
+	.logo {
+		margin: 0;
+		&__text {
+			@include fontDesing(21px, 600, 36px);
+		}
+	}
+	.nav {
+		display: none;
+	}
+	.user-photo img,
+	.user-photo__text {
+		display: none;
+	}
+	.btn-menu {
+		display: block;
+	}
+	.main {
+		width: 100%;
+		padding: 9px 28px;
+		&__greeting {
+			margin: 0 0 18px;
+			@include fontDesing(18px, 400, 27px);
+		}
+	}
+	.head {
+		padding: 12px 18px;
+		flex-direction: column;
+		align-items: flex-start;
+		&__title {
+			@include fontDesing(18px, 600, 27px);
+			margin: 0 0 6px;
+		}
+		&__subtitle {
+			display: inline-block;
+			@include fontDesing(10px, 400, 18px);
+			margin: 0 0 12px;
+		}
+	}
+	.search {
+		&__input {
+			height: 24px;
+		}
+		&__btn {
+			top: 3px;
+		}
+	}
+	.table {
+		display: none;
+	}
+	.table-mob {
+		display: block;
+		width: 100%;
+	}
+	.down {
+		padding: 0 32px 30px;
+		justify-content: center;
+		&__text {
+			display: none;
+		}
+
+		&__link,
+		&__ellipsis {
+			padding: 6px;
+			margin: 0 6px 0 0;
+			@include fontDesing(10px, 500, 9px);
+		}
+	}
+}

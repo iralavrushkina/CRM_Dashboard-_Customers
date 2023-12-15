@@ -1,0 +1,141 @@
+.main {
+	flex: 1 1 auto;
+	padding: 39px 69px;
+
+	&__greeting {
+		margin: 0 0 51px;
+	}
+}
+.greeting {
+	@include fontDesing(24px, 400, 36px);
+}
+.section {
+	background-color: $white;
+	border-radius: 9px;
+	&__head {
+		margin: 0 0 9px;
+	}
+}
+.head {
+	padding: 30px 39px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__title {
+		@include fontDesing(21px, 600, 33px);
+		margin: 0 0 6px;
+	}
+	&__subtitle {
+		@include fontDesing(15px, 400, 21px);
+		color: $green;
+	}
+}
+.search {
+	position: relative;
+	&__input {
+		background-color: $light_blue;
+		max-width: 216px;
+		height: 38px;
+		padding: 9px 9px 9px 39px;
+		border-radius: 10px;
+		border: 0;
+	}
+	&__btn {
+		position: absolute;
+		padding: 0;
+		left: 9px;
+		top: 6px;
+		width: 24px;
+		height: 24px;
+		background: none;
+		border: 0;
+	}
+}
+.table {
+	width: 100%;
+	margin: 0 0 33px;
+	&__cell,
+	&__headcell {
+		@include fontDesing(15px, 500, 21px);
+		border-bottom: 1px solid $light_grey;
+	}
+	&__cell {
+		color: $text-secondary;
+		padding: 24px 0;
+	}
+	&__headcell {
+		color: $super_light_grey;
+		padding: 15px 0;
+	}
+	&__bage_active,
+	&__bage_inactive {
+		border-radius: 3px;
+		padding: 0 12px;
+		@include fontDesing(15px, 500, 21px);
+	}
+	&__bage_active {
+		color: $dark_green;
+		background-color: $light_green;
+		border: 1px solid $dark_green;
+	}
+	&__bage_inactive {
+		color: $red;
+		background-color: $light_red;
+		border: 1px solid $red;
+	}
+}
+.table-mob {
+	display: none;
+	width: 100%;
+	margin: 0 0 18px;
+	&__cell,
+	&__headcell {
+		@include fontDesing(12px, 500, 15px);
+		border-bottom: 1px solid $light_grey;
+	}
+	&__cell {
+		color: $text-secondary;
+		padding: 9px 24px 9px 15px;
+	}
+	&__headcell {
+		padding: 6px 0;
+		color: $super_light_grey;
+	}
+	&__bage_active {
+		border-radius: 3px;
+		padding: 0 6px;
+		@include fontDesing(12px, 500, 15px);
+		color: $dark_green;
+		background-color: $light_green;
+		border: 1px solid $dark_green;
+	}
+}
+.down {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 39px 30px;
+	&__text {
+		@include fontDesing(15px, 500, 21px);
+		color: $super_light_grey;
+	}
+	&__link {
+		background-color: #f5f5f5;
+		border: 1px solid $light_grey;
+		border-radius: 3px;
+		transition: 0.5s ease;
+		&:hover {
+			opacity: 70%;
+		}
+	}
+	&__link,
+	&__ellipsis {
+		color: #404b52;
+		@include fontDesing(12px, 500, 12px);
+		padding: 6px 9px;
+		margin: 0 12px 0 0;
+		text-decoration: none;
+	}
+	&__ellipsis {
+		background-color: none;
+	}
+}
